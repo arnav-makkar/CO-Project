@@ -1,4 +1,4 @@
-import Assembler.assembler as ac
+import assembler as ac
 
 def suggestions_for(instruction):
 
