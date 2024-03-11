@@ -1,31 +1,30 @@
-R_Type = {
-        "add": {"opcode": "0110011", "funct3": "000", "funct7": "0000000"},
-        "sub": {"opcode": "0110011", "funct3": "000", "funct7": "0100000"},
-        "sll": {"opcode": "0110011", "funct3": "001", "funct7": "0000000"},
-        "slt": {"opcode": "0110011", "funct3": "010", "funct7": "0000000"},
-        "sltu": {"opcode": "0110011", "funct3": "011", "funct7": "0000000"},
-        "xor": {"opcode": "0110011", "funct3": "100", "funct7": "0000000"},
-        "srl": {"opcode": "0110011", "funct3": "101", "funct7": "0000000"},
-        "or": {"opcode": "0110011", "funct3": "110", "funct7": "0000000"},
-        "and": {"opcode": "0110011", "funct3": "111", "funct7": "0000000"}
-
+r_type_encoding = {
+    "add": {"opcode": "0110011", "funct3": "000", "funct7": "0000000"},
+    "sub": {"opcode": "0110011", "funct3": "000", "funct7": "0100000"},
+    "sll": {"opcode": "0110011", "funct3": "001", "funct7": "0000000"},
+    "slt": {"opcode": "0110011", "funct3": "010", "funct7": "0000000"},
+    "sltu": {"opcode": "0110011", "funct3": "011", "funct7": "0000000"},
+    "xor": {"opcode": "0110011", "funct3": "100", "funct7": "0000000"},
+    "srl": {"opcode": "0110011", "funct3": "101", "funct7": "0000000"},
+    "or": {"opcode": "0110011", "funct3": "110", "funct7": "0000000"},
+    "and": {"opcode": "0110011", "funct3": "111", "funct7": "0000000"}
 }
 
-I_Type = {
-        "lw": {"opcode": "0000011", "funct3": "010"},
-        "lb": {"opcode": "0000011", "funct3": "010"},
-        "lh": {"opcode": "0000011", "funct3": "010"}, 
-        "ld": {"opcode": "0000011", "funct3": "010"},
-        "addi": {"opcode": "0010011", "funct3": "000"},
-        "sltiu": {"opcode": "0010011", "funct3": "011"},
-        "jalr": {"opcode": "1100111", "funct3": "000"}
+i_type_encoding = {
+    "lw": {"opcode": "0000011", "funct3": "010"},
+    "lb": {"opcode": "0000011", "funct3": "010"},
+    "lh": {"opcode": "0000011", "funct3": "010"}, 
+    "ld": {"opcode": "0000011", "funct3": "010"},
+    "addi": {"opcode": "0010011", "funct3": "000"},
+    "sltiu": {"opcode": "0010011", "funct3": "011"},
+    "jalr": {"opcode": "1100111", "funct3": "000"}
 }
 
-S_Type = {
-        "sw": {"opcode": "0100011", "funct3": "010"}
+s_type_encoding = {
+    "sw": {"opcode": "0100011", "funct3": "010"}
 }
 
-B_Type = {
+b_type_encoding = {
     "beq": {"opcode": "1100011", "funct3": "000"},
     "bne": {"opcode": "1100011", "funct3": "001"},
     "blt": {"opcode": "1100011", "funct3": "100"},
@@ -34,16 +33,16 @@ B_Type = {
     "bgeu": {"opcode": "1100011", "funct3": "111"}
 }
 
-U_Type = {
+u_type_encoding = {
     "lui": {"opcode": "0110111"},
     "auipc": {"opcode": "0010111"}
 }
 
-J_Type = {
-        "jal": {"opcode": "0010111"}
+j_type_encoding = {
+    "jal": {"opcode": "0010111"}
 }
 
-Registers = {
+registers = {
     "zero": "00000",
     "ra": "00001",
     "sp": "00010",
@@ -77,4 +76,3 @@ Registers = {
     "t5": "11110",
     "t6": "11111"
 }
-
