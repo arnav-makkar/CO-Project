@@ -1,6 +1,7 @@
 import re
 from data import *
 import error as er
+import sys
 
 r_type_instructions = ["add", "sub", "sll", "slt", "sltu", "xor", "srl", "or", "and"]
 i_type_instructions = ["lw", "addi", "sltiu", "jalr"]
