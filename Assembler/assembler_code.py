@@ -1,7 +1,6 @@
 import re
 from data import *
 import error as er
-import sys
 
 r_type_instructions = ["add", "sub", "sll", "slt", "sltu", "xor", "srl", "or", "and"]
 i_type_instructions = ["lw", "addi", "sltiu", "jalr"]
@@ -38,10 +37,7 @@ for line in data:
 
     if p == 0:
         print("Error at line", i, end = " ")
-
-        # use error.py
-        # error handling code
-
+        er.suggestions_for(line_data[0])
         continue
 
     if line_data[0] in r_type_instructions:
